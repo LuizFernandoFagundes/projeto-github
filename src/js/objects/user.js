@@ -3,6 +3,7 @@ const user ={
     name: '',
     bio: '',
     userName: '',
+    date: '',
     repos: '',
     followers: '',
     following: '',
@@ -24,6 +25,9 @@ const user ={
         this.twitterUsername = gitHubUser.twitter_username;
         this.blog = gitHubUser.blog;
         this.company = gitHubUser.company;
+        const date = new Date(gitHubUser.created_at);
+        const dataformatada = new Intl.DateTimeFormat('pt-BR',{year:'numeric',month:'long',day:'numeric'});
+        this.date = dataformatada.format(date);
        
     },
     getRepositories(repositories){

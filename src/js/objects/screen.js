@@ -9,7 +9,7 @@ const screen ={
           <div class="carduser">
               <span class="name-data">
                  <h2 class="name">${user.name}</h2>
-                 <p class="data">Joined 25 Jan 2011</p>
+                 <p class="data">${user.date}</p>
               </span>
               <a href="" class="username">${user.userName}</a>
               <p class="bio">${user.bio ?? 'This profile has no bio'}</p>
