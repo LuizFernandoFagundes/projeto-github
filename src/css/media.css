@@ -1,0 +1,34 @@
+@media(max-width: 768px) {
+    body{
+        align-items: flex-start;
+    }
+    
+    .container .informations .informationuser .card .carduser .name-data{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .container .informations .informationuser .follow .repos .text, .followers .text, .following .text{
+        font-size: 1.2rem;
+    }
+    .container .informations .informationuser .follow .repos .number, .followers .number, .following .number{
+        font-size: 1.6rem;
+    }
+    .container .informations .informationuser .info{
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0;
+       
+        
+    }
+    
+    .container .informations .informationuser .buttons .btn{
+        padding: 5px;
+        font-size: 1.2rem;
+           
+    }
+
+    .container .informations .reposuser{
+        grid-template-columns: 1fr;
+    }
+   
+}

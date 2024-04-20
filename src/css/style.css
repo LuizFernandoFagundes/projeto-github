@@ -1,0 +1,417 @@
+body{
+    background-color: var(--background);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family:"Space Mono", monospace;
+}
+.container{
+    width: 900px;
+    margin: 0 auto;
+
+    
+
+    
+}
+
+.cabecalho{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+.cabecalho .project{
+    width: 80%;
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 3.8rem;
+    
+}
+.cabecalho .mode{
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    width: 20%;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 2.1rem;
+    letter-spacing: 1px;
+    position: relative;
+    margin-right: 20px;
+     
+}
+.cabecalho .mode::after{
+    content: "";
+    background-image: url("../img/som.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    right: 0;
+    
+}
+
+.container .search{
+    align-items: center;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: var(--sections);
+    margin-bottom: 30px;
+}
+.container .search .form{
+    display: flex;
+    align-items: center;
+    
+}
+.container .search .form .input{
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: var(--sections);
+    color: var(--paragrafos);
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 2.1rem;
+    letter-spacing: 1px;
+    border: none;
+    outline: none;
+    position: relative;
+    margin-left: 15px;
+    
+} 
+.container .search .form .input::placeholder{
+    color: var(--paragrafos);
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 2.1rem;
+    letter-spacing: 1px;
+} 
+.container .search .form .input:focus{
+    border: 1px solid var(--btn);
+} 
+.fa-magnifying-glass{
+    
+    font-size: 3rem;
+    
+ 
+}
+
+.container .search .form .button{
+    padding: 10px;
+    border-radius: 10px;
+    background-color: var(--btn);
+    color: var(--white);
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 2.1rem;
+    letter-spacing: 1px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+    margin-left: 10px;
+}
+ 
+ .container .informations{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    gap: 10px;
+    flex-wrap: wrap;
+    flex: 1;
+    background-color: var(--sections);   
+    border-radius: 20px;
+    
+    
+    
+       
+}
+
+.informationuser{
+    display: flex;
+    border-radius: 20px;
+    padding: 50px 50px;
+    width: 100%;
+    height: 100%;
+    
+}
+
+
+.container .informations .informationuser .img{
+    max-width: 150px;
+    margin-right: 50px;
+    
+  
+
+}
+
+.container .informations .informationuser .img img{
+    width: 100%;
+    border-radius: 50%;
+    border: 1px solid var(--btn);
+}
+
+.container .informations .informationuser .card{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    
+
+}
+.container .informations .informationuser .card .carduser{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+    
+
+}
+.container .informations .informationuser .card .carduser .name-data{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+   
+   
+
+}
+.container .informations .informationuser .card .carduser .name-data .name{
+    font-size: 2.8rem;
+    font-weight: 700;
+    line-height: 3.3rem;
+    
+    
+}
+.container .informations .informationuser .card .carduser .name-data .data{
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 3.3rem;
+    
+    
+}
+.container .informations .informationuser.carduser{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: var(--sections);
+    width: 100%;
+    height: 150px;
+    
+    
+}
+
+.container .informations .informationuser .carduser .username{
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 2.1rem;
+    letter-spacing: 1px;
+}
+.container .informations .informationuser .carduser .bio{
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 2.1rem;
+    letter-spacing: 1px;
+}  
+
+.container .informations .informationuser .follow{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 20px 0;
+    background-color: var(--background);
+    border-radius: 10px;
+    padding: 10px;
+}
+.container .informations .informationuser .follow .repos, .followers, .following{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+
+}
+.container .informations .informationuser .follow .repos .text, .followers .text, .following .text{
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: 2.1rem;
+    letter-spacing: 1px;
+    color: var(--paragrafos);
+}
+.container .informations .informationuser .follow .repos .number, .followers .number, .following .number{
+    font-size: 2.8rem;
+    font-weight: 700;
+    line-height: 3.3rem;
+    color: var(--white);
+}
+.container .informations .informationuser .info{
+    display: flex;
+    align-items: center; 
+    justify-content: space-between;
+    padding: 10px 100px 10px 0;
+    
+   
+}
+.container .informations .informationuser .info .location, .twitter, .website, .build{
+    font-size: 1.4rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: var(--paragrafos); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+        
+}
+.container .informations .informationuser .info .location .text, .twitter .text, .website .text, .build .text{
+     margin-left: 10px;
+}
+ 
+
+.buttons{
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    
+}
+
+ .buttons .btn{
+    padding: 10px;
+    border-radius: 10px;
+    background-color: var(--btn);
+    color: var(--white);
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 2.1rem;
+    letter-spacing: 1px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+    margin: 0 20px;
+    
+}
+ 
+.reposuser{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    flex: 1;
+    
+    
+} 
+
+.container .informations .geral{
+    background-color: var(--btn);
+    width: 160px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    margin: 20px 0;
+    
+    
+
+}
+
+.container .informations .geral .repositoriesname{
+    font-size: 1.6rem;
+    max-width: 100%;
+    height: 50px;
+    text-align: center;
+    font-weight: 700;
+    word-wrap: break-word;
+    
+    
+    
+}
+
+
+.container .informations .geral .tecnology{
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.container .informations .geral .conteudo{
+    display: flex;
+    align-items: center;
+    
+    margin-bottom: 20px;
+    
+    
+}
+
+.container .informations .geral .conteudo .stars, .forks{
+    font-size: 1.4rem;
+    margin-right: 10px;
+    
+    
+    
+}
+
+.container .informations .geral .conteudo .starsnumber
+{
+    font-size: 1.4rem;
+    margin-right: 10px;
+    
+
+}
+
+
+a{
+    text-decoration: none;
+    
+}
+
+.container .informations .geral .codigo{
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color: var(--sections);
+    color: var(--white);
+    font-size: 1.3rem;
+    margin-bottom: 5px;
+
+}
+
+.container .informations .events{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    flex: 1;
+    background-color: var(--sections);
+    border-radius: 20px;
+    padding: 20px;
+    margin-bottom: 30px;
+    list-style: none;
+}
+.container .informations .events li{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: var(--background);
+    width: 50%;
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+    text-align: center;
+
+}
+
+.esconder{
+    display: none;
+} 
+.mostrar{
+    opacity: 1;
+}   
+
