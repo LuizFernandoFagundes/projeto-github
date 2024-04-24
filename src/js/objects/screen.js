@@ -1,90 +1,90 @@
 const screen ={
-     userProfile : document.querySelector('.informations'),
+     userProfile : document.querySelector('#informations'),
      rederUser(user){
-       this.userProfile.innerHTML =`<div class="informationuser" id="informationuser">
-         <div class="img">
-             <img src="${user.avatarUrl}" alt="foto do perfil">
-          </div>
-          <div class="card">
-          <div class="carduser">
-              <span class="name-data">
-                 <h2 class="name">${user.name}</h2>
-                 <p class="data">${user.date}</p>
-              </span>
-              <a href="" class="username">${user.userName}</a>
-              <p class="bio">${user.bio ?? 'This profile has no bio'}</p>
-          </div>
-          <div class="follow">
-              <div class="repos">
-                 
-                  <span class="text">Repos</span>
-                  <span class="number" id="reposnumber">${user.repos}</span>
-              </div>
-              <div class="followers">
-                 
-                  <span class="text">Followers</span>
-                  <span class="number" id="followersnumber">${user.followers}</span>
-              </div>
-              <div class="following">
-                 
-                  <span class="text">Following</span>
-                  <span class="number" id="followingnumber">${user.following}</span>
-              </div>
-                      
-          </div>
-          <div class="info">
-              <span class="location">
-                  <i class="fa-solid fa-location-dot"></i>
-                 <span class="text" id="userlocation">${user.location ?? 'No location'}</span>
-              </span>
-              <span class="twitter">
-                  <i class="fa-brands fa-twitter"></i>
-                  <span class="text" id="twitter">${user.twitterUsername ?? 'No twitter'}</span>
-              </span>
-
-          </div>
-          <div class="info">
-              <span class="website">
-                  <i class="fa-solid fa-link"></i>
-                  <span class="text" id="blog">${user.blog != '' ? user.blog :'No blog'}</span>
-              </span>
-              <span class="build">
-                  <i class="fa-solid fa-building"></i>
-                  <span class="text" id="company">${user.company ?? 'No company'}</span>
-              </span>
-
-          </div>
+        this.userProfile.innerHTML =`
+        
+        <img src="${user.avatarUrl}" alt="Avatar" class="avatar-desktop">
+        <div class="info">
+            <div class="geral">
+                <img src="${user.avatarUrl}" alt="vatar" class="avatar-mobile">
+                <div class="personal">
+                    <div class="name-info">
+                        <h2 class="name" id="name">${user.name}</h2>
+                        <h3 class="login">${user.company}</h3>
+                    </div>
+                    <p class="date">${user.date}</p>
+                </div>
                 
-      </div>
-      </div>
+            </div>
+            <p class="bio">${user.bio ?? 'This profile has no bio'}</p>
+            <div class="follow">
+                <div class="repos">
+                    <h3 class="text">Repos</h3>
+                    <h3 class="number" id="reposnumber">${user.repos}</h3>
+                </div>
+                <div class="followers">
+                    <h3 class="text">Followers</h3>
+                    <h3 class="number" id="followersnumber">${user.followers}</h3>
+                </div>
+                <div class="following">
+                    <h3 class="text">Following</h3>
+                    <h3 class="number" id="followingnumber">${user.following}</h3>
+                </div>
+                        
+            </div>
 
-     `;
-       
-    //  document.getElementById('informations').innerHTML = html;
+            <div class="locations">
+                <div class="location-info">
+                    <i class="icon-location"></i>
+                    <h3 class="info-text">${user.location ?? 'No location'}</h3>
+                </div>
+                <div class="location-info">
+                    <i class="icon-site"></i>
+                    <h3 class="info-text">${user.blog != '' ? user.blog :'No blog'}</h3>
+                </div>
+                <div class="location-info">
+                    <i class="icon-twitter"></i>
+                    <h3 class="info-text">${user.twitterUsername ?? 'No twitter'}</h3>
+                </div>
+                <div class="location-info">
+                    <i class="icon-company"></i>
+                    <h3 class="info-text">${user.company ?? 'No company'}</h3>
+                </div>
+            </div>
+        </div>
+        `;
+    
      },
+
      getRepositories(repositories){
+         
          let itens='';
          repositories.forEach(repos => {
               itens +=`
-             <div class="geral">
-                       <h2 class="repositoriesname">${repos.name}</h2>
-                       <p class="tecnology">${repos.language}</p>
-                       <div class="conteudo">
-                       <span class="stars">
-                          <i class="fas fa-star"></i>
-                           <span class="starsnumber">${repos.stargazers_count}</span>
-                      </span>
-                       <span class="forks">
-                           <i class="fa-solid fa-code-fork"></i>
-                           <span class="starsnumber">${repos.forks}</span>
-                       </span>
-                  </div>
-                      <a href="${repos.html_url}" target='_blank' class="codigo">Ver o Código</a>  
-                     </div>
-                     `;
+              
+              <div class="reposgeral">
+                  <h2 class="repositoriesname">${repos.name}</h2>
+                  <h3 class="tecnology">${repos.language}</h3>
+                  <div class="conteudo">
+                  <div class="stars">
+                     <i class="fas fa-star"></i>
+                      <h3 class="starsnumber">${repos.stargazers_count}</h3>
+                      </div>
+                      <div class="forks">
+                          <i class="fa-solid fa-code-fork"></i>
+                          <h3 class="starsnumber">${repos.forks}</h3>
+                      </div>
+                       
+                 </div>
+                 <a href="${repos.html_url}" target='_blank' class="codigo">Ver o Código</a> 
+                 
+                </div>
+                
+               `;
                               
           });
-          this.userProfile.innerHTML = itens;
+          let html=`<div class="containerrepos">${itens}</div>`;
+          this.userProfile.innerHTML = html;
      },
      Event(events){
         let html = '';
@@ -100,9 +100,6 @@ const screen ={
             html = `<li>No events</li>`;
         }
         this.userProfile.innerHTML = `<ul class="events">${html}</ul>`; 
-      
-
-
      }
 };
 

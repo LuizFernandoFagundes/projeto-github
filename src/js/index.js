@@ -9,9 +9,7 @@ document.getElementById('button').addEventListener('click',(e)=>{
     const input = document.getElementById('input').value;
     if(validateEmptyInput(input)) return;
     getUserProfile(input);
-    
-    
-    
+   
 });
 
 document.getElementById('btnrepos').addEventListener('click',()=>{
@@ -45,26 +43,33 @@ document.getElementById('input').addEventListener('keyup',(e)=>{
     }
         
 });
-
-
 function validateEmptyInput(userName){
     if(userName.length == 0){
-        alert('Digite um nome de usuário');
+        document.querySelector('.error').style.display = 'block';
+        document.querySelector('#informations').innerHTML = 'User not found';
+        document.getElementById('buttons').classList.add('esconder');
         return true;
     }
+    
+        document.querySelector('.error').style.display = 'none';
+    
 }
 
 async function getUserProfile(username){
    
    const userResponse = await getUser(username);
    if(userResponse.message == 'Not Found'){
-       alert('Usuário não encontrado');
+    document.querySelector('.error').style.display = 'block';
+    document.querySelector('#informations').innerHTML = 'User not found';
+    document.getElementById('buttons').classList.add('esconder');
        return;
    }
    
    user.setInfo(userResponse);
    screen.rederUser(user);
    document.getElementById('buttons').classList.remove('esconder');
+   document.querySelector('#informations').style.opacity = 1;
+   document.querySelector('.error').style.display = 'none';
 }
 
 async function getUserRepos(username){

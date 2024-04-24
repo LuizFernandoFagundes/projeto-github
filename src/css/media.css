@@ -1,34 +1,95 @@
-@media(max-width: 768px) {
+@media(min-width: 768px) {
     body{
-        align-items: flex-start;
+        padding: 0 98px;
     }
     
-    .container .informations .informationuser .card .carduser .name-data{
-        flex-direction: column;
-        align-items: flex-start;
+
+    .form{
+        padding: 10px 10px 10px 32px;
     }
-    .container .informations .informationuser .follow .repos .text, .followers .text, .following .text{
-        font-size: 1.2rem;
+
+    .form .input{
+        font-size: 18px;
+        line-height: 25px;
+        
     }
-    .container .informations .informationuser .follow .repos .number, .followers .number, .following .number{
-        font-size: 1.6rem;
+
+    .button,.login{
+        font-size: 16px;
+        line-height: 23.7px;
     }
-    .container .informations .informationuser .info{
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 0;
+
+    .name{
+        font-size: 26px;
+        line-height: 38px;
+    }
+
+    .informations{
+        padding: 40px;
+    }
+
+    .geral{
+        column-gap: 40px;
+    }
+    .date{
+        font-size: 15px;
+        line-height: 22px;
+    }
+
+    .follow .repos .text, .follow .followers .text, .follow .following .text{
+        font-size: 16px;
+        line-height: 23.7px;
+    }
+
+    .bio{
+        font-size: 16px;
+        line-height: 30px;
+    }
+
+    .locations{
+        grid-template-columns: auto auto;
+        width: 100%;
+    }
+    .location-info:nth-child(3){
+        grid-column: 2/2;
+        grid-row: 1/2;
+
+    }
+   
+   
+}
+
+@media(min-width:1440px){
+   
+    .search,.card{
+        width: 730px;
+    }
+    .name{
+        margin-bottom: 10px;
+    }
+    .avatar-mobile{
+        display: none;
+        
+    }
+    .avatar-desktop{
+        display: block;
+    }
+
+    .informations{
+        display: flex;
+        column-gap: 37px;
        
         
     }
-    
-    .container .informations .informationuser .buttons .btn{
-        padding: 5px;
-        font-size: 1.2rem;
-           
-    }
+    .personal{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
 
-    .container .informations .reposuser{
-        grid-template-columns: 1fr;
     }
-   
+    .containerrepos{
+        gap: 20px;
+        justify-content: center;
+    }
+    
 }
