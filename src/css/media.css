@@ -66,6 +66,7 @@
     }
     .name{
         margin-bottom: 10px;
+        
     }
     .avatar-mobile{
         display: none;
@@ -81,15 +82,11 @@
        
         
     }
-    .personal{
-        display: flex;
-        justify-content: space-between;
-        width: 100%;
-
-    }
+   
     .containerrepos{
         gap: 20px;
         justify-content: center;
     }
+   
     
 }

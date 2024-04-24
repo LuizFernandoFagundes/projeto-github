@@ -10,7 +10,7 @@ const screen ={
                 <div class="personal">
                     <div class="name-info">
                         <h2 class="name" id="name">${user.name}</h2>
-                        <h3 class="login">${user.company}</h3>
+                        <h3 class="login">${user.company ?? 'No Company'}</h3>
                     </div>
                     <p class="date">${user.date}</p>
                 </div>
