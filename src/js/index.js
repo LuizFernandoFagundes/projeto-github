@@ -14,20 +14,20 @@ document.getElementById('button').addEventListener('click',(e)=>{
 
 document.getElementById('btnrepos').addEventListener('click',()=>{
     
-    const teste = document.getElementById('input').value;
-    getUserRepos(teste);
+    const input = document.getElementById('input').value;
+    getUserRepos(input);
 });
 
 document.getElementById('btnprofile').addEventListener('click',()=>{
     
-    const teste = document.getElementById('input').value;
-    getUserProfile(teste);
+    const input = document.getElementById('input').value;
+    getUserProfile(input);
 });
 
 document.getElementById('btnevents').addEventListener('click',()=>{
     
-    const teste = document.getElementById('input').value;
-    getEvents(teste);
+    const input = document.getElementById('input').value;
+    getEvents(input);
 });
 
 
